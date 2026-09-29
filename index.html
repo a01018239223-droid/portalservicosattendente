@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tatuapecas | Peças e Acessórios Automotivos</title>
+
+  <meta
+    name="description"
+    content="Tatuapecas Peças e Acessórios Automotivos — peças e acessórios automotivos em São Paulo, Vila Guilherme."
+  >
+
+  <meta name="theme-color" content="#080b12">
+
+  <style>
+    :root {
+      --bg: #070a10;
+      --bg-soft: #0d121b;
+      --card: #101722;
+      --card-2: #151d29;
+      --text: #f8fafc;
+      --muted: #9ca8b8;
+      --border: rgba(255,255,255,.09);
+
+      --primary: #ff4d00;
+      --primary-light: #ff7a00;
+      --green: #20d47b;
+
+      --radius: 20px;
+      --max: 1180px;
+
+      --shadow:
+        0 25px 70px rgba(0,0,0,.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(255,77,0,.15),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(255,122,0,.08),
+          transparent 25%
+        ),
+        var(--bg);
+
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      background: rgba(7,10,16,.82);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-weight: 900;
+      letter-spacing: -.5px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+
+      box-shadow:
+        0 10px 30px rgba(255,77,0,.25);
+
+      font-size: 21px;
+    }
+
+    .logo-text small {
+      display: block;
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    nav a {
+      color: var(--muted);
+
+      font-size: 14px;
+      font-weight: 650;
+
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .nav-contact {
+      padding: 11px 18px;
+
+      color: white !important;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      padding: 105px 0 90px;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 450px;
+      height: 450px;
+
+      right: -180px;
+      top: 30px;
+
+      border-radius: 50%;
+
+      background: rgba(255,77,0,.11);
+
+      filter: blur(90px);
+
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 12px;
+
+      border: 1px solid rgba(32,212,123,.2);
+
+      border-radius: 999px;
+
+      background: rgba(32,212,123,.08);
+
+      color: #58e99b;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      box-shadow: 0 0 10px var(--green);
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 72px);
+
+      line-height: 1.01;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 24px;
+    }
+
+    .orange {
+      background:
+        linear-gradient(
+          90deg,
+          #ff4d00,
+          #ff9a3c
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 49px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 0 20px;
+
+      border-radius: 12px;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      border: 1px solid var(--border);
+
+      transition: .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      border: 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+
+      box-shadow:
+        0 12px 30px rgba(255,77,0,.20);
+    }
+
+    .button-dark {
+      background: rgba(255,255,255,.045);
+    }
+
+    /* =========================
+       COMPANY CARD
+    ========================== */
+
+    .company-card {
+      position: relative;
+
+      padding: 30px;
+
+      border-radius: 23px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.09),
+          rgba(255,255,255,.025)
+        );
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+    }
+
+    .company-icon {
+      width: 78px;
+      height: 78px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          #ff8700
+        );
+
+      font-size: 35px;
+
+      margin-bottom: 22px;
+    }
+
+    .company-card h2 {
+      font-size: 24px;
+      line-height: 1.25;
+
+      margin-bottom: 9px;
+    }
+
+    .company-card > p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .company-meta {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+
+      margin-top: 25px;
+    }
+
+    .mini {
+      padding: 14px;
+
+      border-radius: 13px;
+
+      background: rgba(255,255,255,.045);
+
+      border: 1px solid var(--border);
+    }
+
+    .mini span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .8px;
+
+      margin-bottom: 3px;
+    }
+
+    .mini strong {
+      font-size: 14px;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      color: #ff7438;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.8px;
+
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(30px, 4vw, 43px);
+
+      line-height: 1.1;
+
+      letter-spacing: -1.7px;
+
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      max-width: 700px;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+    .service {
+      padding: 25px;
+
+      border-radius: 17px;
+
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      transition: .25s;
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+
+      background: var(--card-2);
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background: rgba(255,77,0,.10);
+
+      font-size: 21px;
+
+      margin-bottom: 18px;
+    }
+
+    .service h3 {
+      font-size: 17px;
+
+      margin-bottom: 7px;
+    }
+
+    .service p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       HIGHLIGHTS
+    ========================== */
+
+    .highlights {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+    .highlight {
+      padding: 25px;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.07),
+          rgba(255,255,255,.025)
+        );
+
+      border: 1px solid var(--border);
+    }
+
+    .highlight-number {
+      font-size: 27px;
+
+      font-weight: 900;
+
+      margin-bottom: 4px;
+    }
+
+    .highlight-label {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       DATA
+    ========================== */
+
+    .data-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .data-card {
+      padding: 22px;
+
+      border-radius: 16px;
+
+      background: var(--card);
+
+      border: 1px solid var(--border);
+
+      transition: .2s;
+    }
+
+    .data-card:hover {
+      background: var(--card-2);
+    }
+
+    .data-label {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: .8px;
+
+      margin-bottom: 5px;
+    }
+
+    .data-value {
+      font-size: 15px;
+
+      font-weight: 750;
+
+      word-break: break-word;
+    }
+
+    /* =========================
+       ADDRESS
+    ========================== */
+
+    .address-grid {
+      display: grid;
+
+      grid-template-columns: .85fr 1.15fr;
+
+      gap: 18px;
+    }
+
+    .address-card,
+    .map-card {
+      border-radius: 21px;
+
+      border: 1px solid var(--border);
+
+      overflow: hidden;
+    }
+
+    .address-card {
+      padding: 32px;
+
+      background: var(--card);
+    }
+
+    .address-card h3 {
+      font-size: 23px;
+
+      margin-bottom: 15px;
+    }
+
+    .address {
+      color: var(--muted);
+
+      line-height: 1.9;
+
+      margin-bottom: 24px;
+    }
+
+    .address strong {
+      color: #fff;
+    }
+
+    .map-card {
+      min-height: 330px;
+
+      display: grid;
+      place-items: center;
+
+      text-align: center;
+
+      padding: 35px;
+
+      background:
+        linear-gradient(
+          rgba(7,10,16,.70),
+          rgba(7,10,16,.90)
+        ),
+        repeating-linear-gradient(
+          45deg,
+          #151d28,
+          #151d28 12px,
+          #101720 12px,
+          #101720 24px
+        );
+    }
+
+    .map-pin {
+      font-size: 45px;
+
+      margin-bottom: 8px;
+    }
+
+    .map-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .map-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      padding: 45px;
+
+      border-radius: 25px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 30px;
+
+      background:
+        radial-gradient(
+          circle at 85% 0%,
+          rgba(255,77,0,.24),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #141d2b,
+          #0b111b
+        );
+
+      border: 1px solid var(--border);
+    }
+
+    .contact h2 {
+      font-size: 32px;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 7px;
+    }
+
+    .contact p {
+      color: var(--muted);
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      padding: 35px 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .footer-grid {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero-grid,
+      .address-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .highlights {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(
+          var(--max),
+          calc(100% - 28px)
+        );
+      }
+
+      .hero {
+        padding: 70px 0 55px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .services,
+      .highlights,
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .company-card {
+        padding: 23px;
+      }
+
+      .company-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        padding: 30px 22px;
+      }
+
+      .contact h2 {
+        font-size: 27px;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
+
+        <div class="logo-icon">
+          🚗
+        </div>
+
+        <div class="logo-text">
+          Tatuapecas
+          <small>Peças & Acessórios Automotivos</small>
+        </div>
+
+      </a>
+
+      <nav>
+        <a href="#empresa">Empresa</a>
+        <a href="#produtos">Atuação</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="#localizacao">Localização</a>
+
+        <a
+          href="#contato"
+          class="nav-contact"
+        >
+          Contato
+        </a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="inicio">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="status">
+            <span class="status-dot"></span>
+            Empresa com situação cadastral ativa
+          </div>
+
+          <h1>
+            Tatuapecas
+            <br>
+            <span class="orange">
+              Peças & Acessórios
+            </span>
+            Automotivos
+          </h1>
+
+          <p class="hero-description">
+            Informações cadastrais e institucionais da
+            Tatuapecas Peças e Acessórios Automotivos,
+            localizada na Vila Guilherme, em São Paulo/SP.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="#cadastro"
+              class="button button-primary"
+            >
+              Ver informações
+            </a>
+
+            <a
+              href="#localizacao"
+              class="button button-dark"
+            >
+              📍 Ver endereço
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="company-card">
+
+          <div class="company-icon">
+            🚘
+          </div>
+
+          <h2>
+            Tatuapecas Pecas e Acessorios Automotivos
+          </h2>
+
+          <p>
+            Loja Tatuapecas Pecas e Acessorios
+            Automotivos LTDA
+          </p>
+
+          <div class="company-meta">
+
+            <div class="mini">
+              <span>CNPJ</span>
+              <strong>49.034.388/0001-30</strong>
+            </div>
+
+            <div class="mini">
+              <span>Situação</span>
+              <strong style="color:#58e99b">
+                ● Ativa
+              </strong>
+            </div>
+
+            <div class="mini">
+              <span>Abertura</span>
+              <strong>03/01/2023</strong>
+            </div>
+
+            <div class="mini">
+              <span>Porte</span>
+              <strong>Micro Empresa</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EMPRESA
+    ========================== -->
+
+    <section id="empresa">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Perfil empresarial
+          </div>
+
+          <h2>
+            Uma empresa ativa em São Paulo
+          </h2>
+
+          <p>
+            Confira os principais dados cadastrais,
+            informações empresariais e localização
+            da Tatuapecas.
+          </p>
+
+        </div>
+
+
+        <div class="highlights">
+
+          <div class="highlight">
+
+            <div class="highlight-number">
+              03/01/2023
+            </div>
+
+            <div class="highlight-label">
+              Data de abertura
+            </div>
+
+          </div>
+
+
+          <div class="highlight">
+
+            <div class="highlight-number">
+              R$ 50 mil
+            </div>
+
+            <div class="highlight-label">
+              Capital social
+            </div>
+
+          </div>
+
+
+          <div class="highlight">
+
+            <div class="highlight-number">
+              MATRIZ
+            </div>
+
+            <div class="highlight-label">
+              Tipo de estabelecimento
+            </div>
+
+          </div>
+
+
+          <div class="highlight">
+
+            <div class="highlight-number">
+              SIM
+            </div>
+
+            <div class="highlight-label">
+              Optante pelo Simples
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ATUAÇÃO
+    ========================== -->
+
+    <section id="produtos">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Atuação
+          </div>
+
+          <h2>
+            Peças e acessórios automotivos
+          </h2>
+
+          <p>
+            Apresentação institucional da área de atuação
+            da empresa.
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <div class="service">
+
+            <div class="service-icon">
+              🔧
+            </div>
+
+            <h3>
+              Peças automotivas
+            </h3>
+
+            <p>
+              Componentes e peças destinados
+              à manutenção automotiva.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-icon">
+              🚗
+            </div>
+
+            <h3>
+              Acessórios
+            </h3>
+
+            <p>
+              Produtos e acessórios para
+              veículos automotores.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-icon">
+              ⚙️
+            </div>
+
+            <h3>
+              Componentes
+            </h3>
+
+            <p>
+              Soluções e componentes para
+              diferentes aplicações automotivas.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="service-icon">
+              🛠️
+            </div>
+
+            <h3>
+              Linha automotiva
+            </h3>
+
+            <p>
+              Produtos relacionados ao mercado
+              de peças e acessórios automotivos.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CADASTRO
+    ========================== -->
+
+    <section id="cadastro">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Dados cadastrais
+          </div>
+
+          <h2>
+            Informações da empresa
+          </h2>
+
+          <p>
+            Dados apresentados conforme as informações
+            fornecidas.
+          </p>
+
+        </div>
+
+
+        <div class="data-grid">
+
+          <div class="data-card">
+            <div class="data-label">
+              CNPJ
+            </div>
+            <div class="data-value">
+              49.034.388/0001-30
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              CNPJ sem pontuação
+            </div>
+            <div class="data-value">
+              49034388000130
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Razão Social
+            </div>
+            <div class="data-value">
+              Loja Tatuapecas Pecas e
+              Acessorios Automotivos LTDA
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Nome Fantasia
+            </div>
+            <div class="data-value">
+              Tatuapecas Pecas e
+              Acessorios Automotivos
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Inscrição Estadual SP
+            </div>
+            <div class="data-value">
+              138.391.373.111
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Data de abertura
+            </div>
+            <div class="data-value">
+              03/01/2023
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Porte
+            </div>
+            <div class="data-value">
+              Micro Empresa
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Natureza Jurídica
+            </div>
+            <div class="data-value">
+              Sociedade Empresária Limitada
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Capital Social
+            </div>
+            <div class="data-value">
+              R$ 50.000,00
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Tipo
+            </div>
+            <div class="data-value">
+              Matriz
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Situação
+            </div>
+            <div class="data-value" style="color:#58e99b">
+              ● Ativa
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Data Situação Cadastral
+            </div>
+            <div class="data-value">
+              03/01/2023
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Opção pelo MEI
+            </div>
+            <div class="data-value">
+              Não
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Opção pelo Simples
+            </div>
+            <div class="data-value">
+              Sim
+            </div>
+          </div>
+
+
+          <div class="data-card">
+            <div class="data-label">
+              Data opção Simples
+            </div>
+            <div class="data-value">
+              03/01/2023
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCALIZAÇÃO
+    ========================== -->
+
+    <section id="localizacao">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Localização
+          </div>
+
+          <h2>
+            Onde encontrar a Tatuapecas
+          </h2>
+
+          <p>
+            Endereço informado para correspondência
+            e localização da empresa.
+          </p>
+
+        </div>
+
+
+        <div class="address-grid">
+
+          <div class="address-card">
+
+            <h3>
+              Endereço
+            </h3>
+
+            <div class="address">
+
+              <strong>
+                Rua Eugenio de Freitas, 371
+              </strong>
+
+              <br>
+
+              Conj 86 B
+
+              <br>
+
+              Vila Guilherme
+
+              <br>
+
+              São Paulo — SP
+
+              <br>
+
+              CEP: 02060-000
+
+            </div>
+
+
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Eugenio+de+Freitas+371+Vila+Guilherme+São+Paulo+SP+02060-000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📍 Abrir no Google Maps
+            </a>
+
+          </div>
+
+
+          <div class="map-card">
+
+            <div>
+
+              <div class="map-pin">
+                📍
+              </div>
+
+              <h3>
+                Vila Guilherme
+              </h3>
+
+              <p>
+                Rua Eugenio de Freitas, 371<br>
+                Conj 86 B<br>
+                São Paulo — SP<br>
+                CEP 02060-000
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Eugenio+de+Freitas+371+Vila+Guilherme+São+Paulo+SP+02060-000"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-dark"
+              >
+                Ver localização
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section id="contato">
+
+      <div class="container">
+
+        <div class="contact">
+
+          <div>
+
+            <div class="eyebrow">
+              Fale conosco
+            </div>
+
+            <h2>
+              Entre em contato
+            </h2>
+
+            <p>
+              Utilize os canais de contato disponibilizados
+              para a empresa.
+            </p>
+
+          </div>
+
+
+          <div class="contact-buttons">
+
+            <a
+              href="mailto:am****@****.com"
+              class="button button-primary"
+            >
+              ✉️ Enviar e-mail
+            </a>
+
+
+            <a
+              href="tel:+5511989XXXXXXX"
+              class="button button-dark"
+            >
+              📞 (11) 989****-****
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+        © <span id="year"></span>
+        Tatuapecas Pecas e Acessorios Automotivos
+      </div>
+
+      <div>
+        CNPJ 49.034.388/0001-30 · São Paulo/SP
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    // Ano automático no rodapé
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Pequena animação de entrada dos cards
+    const cards = document.querySelectorAll(
+      ".service, .data-card, .highlight"
+    );
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+          }
+
+        });
+
+      },
+      {
+        threshold: .08
+      }
+    );
+
+    cards.forEach(card => {
+
+      card.style.opacity = "0";
+      card.style.transform = "translateY(12px)";
+      card.style.transition =
+        "opacity .5s ease, transform .5s ease";
+
+      observer.observe(card);
+
+    });
+
+  </script>
+
+</body>
+</html>
